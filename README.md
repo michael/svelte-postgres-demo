@@ -2,6 +2,14 @@
 
 A starting point for connecting SvelteKit with Postgres. Write pure SQL and save yourself the headaches with object relational mappers.
 
+In [api.js](./src/lib/api.js) you can access the database like this:
+
+```js
+export async function createTodo (userId, { text, done }) {
+  return db.one('INSERT INTO todos(user_id, text, done) VALUES($1, $2, $3) RETURNING *', [userId, text, done]);
+}
+```
+
 ## Development
 
 Make sure you have a Postgres DB instance running and provide your connection string as an environment variable.
