@@ -41,6 +41,6 @@ export const patch = async ({ request, locals }) => {
 
 export const del = async ({ request, locals }) => {
 	const form = await request.formData();
-	await deleteTodo(locals.userid, form.get('todoId'));
+	await deleteTodo(locals.userId, form.get('todoId'));
 	return redirect;
 };
