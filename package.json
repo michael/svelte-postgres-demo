@@ -1,5 +1,5 @@
 {
-  "name": "sveltekit-postgres-demo",
+  "name": "svelte-postgres-demo",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
